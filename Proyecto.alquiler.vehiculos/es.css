@@ -1,0 +1,715 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: white;
+    padding-top:90px;
+}
+
+header{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 15px;
+    min-height: 90px;
+
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:100;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+}
+
+.logo-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 5px;
+
+}
+
+
+.logo .titulo{
+    font-size: 1.4rem;
+    color: black;
+    margin: 0;
+}
+
+.subtitulo{
+    margin: 0;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+.texto-logo{
+    display: flex;
+    flex-direction: column;
+}
+
+.subtitulo{
+    font-size: 1.0rem;
+    color: black;
+}
+
+nav{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav a{
+    text-decoration: none;
+    color:black;
+}
+
+nav a:hover{
+    color: #ffd700;
+}
+
+.boton-reserva{
+    background-color: #1a73e8;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.25);
+}
+
+.boton-reserva:hover{
+    background-color: #1558b0;
+}
+
+
+
+/*HERO SECTION */
+#hero {
+  /*crea un degradado entre colores*/
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.55),
+        rgba(0, 0, 0, 0.55)
+    /*El degradado está antes de la url para que quede sobre la imagen*/
+    ), url('./public/hero-banner.jpg');
+    background-size: cover;  /*para cubrir todo el elemento*/
+    background-position: center; /*para centrar la imagen*/
+    background-repeat: no-repeat;/*para evitar que se repita*/
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 90vh;
+    padding: 40px 20px;
+    gap: 30px;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    max-width: 750px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+#hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    max-width: 560px;
+    line-height: 1.7;
+}
+
+#hero button {
+    margin-top:20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(26, 115, 232, 0.4);
+}
+
+#hero button:hover {
+    background-color: #1558b0;
+}
+
+
+
+#nuestros-servicios{
+    padding:60px 20px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+#nuestros-servicios h2{
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#nuestros-servicios p{
+    margin-left: auto;
+    margin-top:20px;
+    margin-bottom: 60px;
+    margin-right: auto;
+    max-width: 700px;
+    line-height: 1.6;
+    color: #444;
+    font-size: 1.10rem;
+}
+
+#servicios{
+    padding: 40px 20px;
+    background-color: white;
+}
+
+#servicios h2{
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+}
+
+.servicios-container{
+    display:flex;
+    flex-wrap: wrap;
+    gap:40px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.servicio{
+    background-color: white;
+    border-radius:10px;
+    padding:20px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* Hace que el movimiento y el cambio de sombra sean suaves en 180ms */
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+/* Aplica el mismo efecto cuando el cursor pasa por encima o cuando se toca la tarjeta */
+.servicio:hover,
+.servicio:active {
+    transform: translateY(-9px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.servicio-icono{
+    /* Iconos de servicio agrandados para mejor visibilidad */
+    width:64px;
+    height:64px;
+    padding: 10px;
+    background-color: #e8f0fe;
+    border-radius:10px;
+}
+
+
+.servicio h3{
+    font-size: 1.05rem;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.servicio p{
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+
+
+
+#nuestros-vehiculos{
+    margin: 60px auto;
+    max-width: 100%;
+    padding: 40px 40px;
+    margin-top: 0;
+}
+
+#nuestros-vehiculos h2{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#nuestros-vehiculos p{
+    margin-top: 10px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+}
+
+#nuestros-vehiculos >p{
+    margin-top: 30px;
+     margin-bottom: 30px;
+     text-align: center;
+       color: #444;
+}
+
+.vehiculos-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 0px 16px;
+}
+
+.vehiculo{
+    flex:1 1 300px;
+    max-width: 320px;
+    min-width: 200px;
+    border-radius: 20px;
+    padding: 14px;
+    height: auto;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+    text-align:left;
+    background-color: white;
+}
+
+
+.vehiculo-imagen{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2px;
+}
+
+.vehiculo .tipo{
+    font-weight: 600;
+    color: #1a73e8;
+    margin: 2px 0 1px;
+}
+
+.vehiculo .precio{
+    color: #555;
+    font-weight: 700;
+    margin: 1px 0 3px;
+}
+
+.vehiculo p{
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* Botón dentro de la tarjeta de vehículo */
+.vehiculo button{
+    margin-top: 20px;
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 600px;
+    cursor: pointer;
+    width: 100%;
+    box-shadow: 0 4px 16px rgba(5, 5, 5, 0.4);
+}
+
+.vehiculo button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+
+
+
+
+
+#nosotros {
+    padding: 60px 40px;
+    background-color: whitesmoke;
+}
+
+#nosotros h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.nosotros-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nosotros-img {
+    width: 280px;
+    height: 420px;
+    border-radius: 16px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.nosotros-texto {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nosotros-texto h3 {
+    font-size: 1.1rem;
+    color: #1a1a1a;
+    padding-left: 10px;
+    border-left: 3px solid #1a73e8;
+    margin-top: 20px;
+}
+
+.nosotros-texto p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    margin-left: 20px;
+}
+
+.Nosotros-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-shrink: 0;
+    width: 200px;
+    margin-top: 0;
+    padding-left: 20px;
+}
+
+.stat{
+    background-color: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-icono{
+    width: 36px;
+    height: 36px;
+}
+
+.stat h3{
+    font-size: 1.4rem;
+    color: #1a73e8;
+    margin:0;
+    border-left: none;/*no toma el estilo del h3 anterior*/
+    padding-left: 0;
+}
+
+.stat p{
+    font-size: 0.8rem;
+    color: #555;
+    margin:0;
+}
+
+
+footer{
+    background-color: #333;
+    color:white;
+    padding: 50px 40px 20px;
+}
+
+.footer-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:60px;
+    max-width: 1100px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    gap:14px;
+    min-width: 200px;
+}
+
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+
+.footer-logo-img{
+    width: 40px;
+    height: 40px;
+}
+
+.footer-logo h3{
+    font-size: 1.6rem;
+    font-weight: 700;
+    color:white;
+    border-left: none; /*no toma el estilo del h3 de nosotros*/
+    padding-left: 0;
+}
+
+.footer-col >p{
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.6;
+}
+
+/*Titulo de cada columna*/
+.footer-col h4{
+    font-size: 1rem;
+    color:white;
+    letter-spacing: normal;
+    text-transform:none;
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 7px;
+}
+
+/*cada item de icono*/
+.footer-items{
+    display: flex;
+    gap:10px;
+    align-items: flex-start;
+}
+
+.footer-items div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-items img{
+    width: 20px;
+    height: 20px;
+    filter: invert(1); /*iconos en blanco*/
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.footer-items p{
+    font-size: 0.9rem;
+    color: #aaa;
+    margin:0;
+    line-height: 1.6;
+}
+
+.footer-redes{
+    display: flex;
+    gap:12px;
+}
+
+.footer-redes a{
+    background-color: #333;
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.footer-redes a:hover{
+    background-color: #1a73e8;
+}
+
+.footer-redes img{
+    width:20px;
+    height:20px;
+    filter: invert(1);
+}
+
+/*linea y copyritgh*/
+.footer-bottom{
+text-align: center;
+margin-top: 40px;
+padding-top: 20px;
+border-top: 1px solid black;
+}
+
+.footer-bottom p{
+    font-size: 0.8rem;
+    color: #666;
+}
+
+
+@media (max-width: 900px) {
+    .vehiculo {
+         flex: 1 1 45%; max-width: 48%;
+        }
+    #hero h1 {
+        font-size: 2rem;
+     }
+    .nosotros-container {
+        flex-direction: column;
+    }
+    .nosotros-img { 
+        width: 100%; height: 260px; 
+    }
+    .nosotros-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .stat {
+        flex: 1 1 140px;
+        min-width: 120px;
+     }
+}
+
+
+
+@media (max-width: 560px) {
+    body{
+        padding-top: 220px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+         padding: 10px 15px;
+         }
+    .logo {
+        gap: 2px;
+     }
+    nav {
+         width: 100%;
+         flex-direction: column;
+         gap: 10px;
+          align-items:stretch;
+         }
+    nav a {
+        text-align: center;
+         width: 100%;
+         }
+    .boton-reserva {
+        width: 100%;
+         text-align: center;
+        }
+
+
+    #hero {
+         min-height: 70vh;
+         padding: 30px 16px;
+        }
+    #hero h1 {
+        font-size: 1.4rem;
+    }
+
+
+    .servicio {
+        width: 100%;
+     }
+
+
+    .vehiculo {
+        flex: 1 1 100%;
+        max-width: 100%;
+     }
+    .vehiculo-imagen {
+        height: 140px;
+    }
+    .vehiculo p {
+         font-size: 0.95rem;
+         line-height: 1.2;
+         }
+    .vehiculo button {
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    .nosotros-container {
+         flex-direction: column;
+         }
+    .nosotros-img {
+         width: 100%;
+          height: 220px;
+        }
+    .nosotros-stats {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+        padding-left: 0;
+    }
+    .stat {
+         flex: 1 1 120px;
+         min-width: 100px;
+        }
+
+
+    footer {
+        padding: 30px 16px 20px;
+     }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    header {
+        padding: 10px;
+    }
+    .logo img {
+         height: 36px;
+    }
+    .logo .titulo {
+        font-size: 1rem;
+    }
+    #hero h1 {
+        font-size: 1.2rem;
+    }
+    #hero p {
+        font-size: 0.9rem;
+    }
+    .vehiculo-imagen {
+        height: 100px;
+    }
+    .servicio {
+        padding: 14px;
+     }
+    .stat {
+        flex: 1 1 80px;
+        min-width: 80px;
+    }
+    body {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Vrox</title>
+    <link rel="stylesheet" href="Reservas.css">
+    <link rel="shortcut icon" href="./public/coche.png" type="image/png">
+</head>
+<body>
+
+<header>
+
+      <a href="index.html" class="logo">
+        <img src="./public/coche.png" alt="Logo de Vrox" />
+        <div class="logo-text">
+          <h1 class="titulo">Vrox</h1>
+          <p class="subtitulo">Tu Rentadora de Confianza</p>
+        </div>
+      </a>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="index.html#nuestros-servicios">Servicios</a>
+            <a href="index.html#nuestros-vehiculos">Vehiculos</a>
+            <a href="index.html#nosotros">Nosotros</a>
+            <a href="index.html#contacto">Contacto</a>
+        </nav>
+</header>
+
+<main>
+<div class="reserva-container">
+
+    <h2>Reservar un Vehículo</h2>
+    <p>Completa el formulario para reservar tu vehículo con Vrox. Nos pondremos en contacto contigo para confirmar los detalles de tu reserva.</p>
+    
+    <form action="#" method="post">
+
+        
+        <!-- seccion personal/ registro datos-->
+
+        <fieldset>
+            <legend>Informacion Personal</legend>
+
+            <div class="form-grupo">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Alejo" required/>
+            </div>
+
+             <div class="form-grupo">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Gonzalez" required/>
+            </div>
+
+             <div class="form-grupo">
+                <label for="email">Correo electronico:</label>
+                <input type="email" id="email" name="email" placeholder="alejo@email.com" required/>
+            </div>
+
+             <div class="form-grupo">
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+54 11 4444 5678" required/>
+            </div>
+
+             <div class="form-grupo">
+                <label for="dni">DNI / Pasaporte:</label>
+                <input type="text" id="dni" name="dni" placeholder="87654321" required/>
+            </div>
+        </fieldset>
+
+
+        <!-- infromacion de la reserva -->
+        <fieldset>
+        <legend >Información de la Reserva</legend>
+
+        <div class="form-grupo">
+            <label for="tipo-vehiculo">Tipo de vehículo:</label>
+            <select id="tipo-vehiculo" name="tipo-vehiculo" required>
+                <option value="">---Selecciona un tipo---</option>
+                <option value="economico">Sedan</option>
+                <option value="compacto">SUV</option>
+                <option value="mediano">Deportivo</option>
+                <option value="suv">Ejecutivo</option>
+            </select>
+        </div>
+
+        <div class="form-grupo">
+            <label for="modelo">Modelo:</label>
+            <select id="modelo" name="modelo" required>
+                <option value="">---Selecciona un modelo---</option>
+                <option value="toyota-corolla">Toyota Corolla</option>
+                <option value="range-rover-evoque">Range Rover Evoque</option>
+                <option value="chevrolet-camaro">Chevrolet Camaro</option>
+                <option value="mercedes-g-class">Mercedes-Benz G-Class</option>
+            </select>
+        </div>
+
+          <div class="form-grupo">
+            <label for="fecha-retiro">Fecha de retiro:</label>
+            <input type="date" id="fecha-retiro" name="fecha-retiro" required/>
+        </div>
+
+
+        <div class="form-grupo">
+            <label for="fecha-devolucion">Fecha de devolucion:</label>
+            <input type="date" id="fecha-devolucion" name="fecha-devolucion" required/>
+        </div>
+
+
+        <div class="form-grupo">
+            <label for="hora-retiro">Hora de retiro:</label>
+            <input type="time" id="hora-retiro" name="hora-retiro" required/>
+        </div>
+
+        <div class="form-grupo">
+            <label for="sucursal">Sucursal de retiro:</label>
+            <select id="sucursal" name="sucursal" required>
+                <option value="">---Selecciona una sucursal---</option>
+                <option value="quilmes">Quilmes</option>
+                <option value="flores">Flores</option>
+                <option value="palermo">Palermo</option>
+                <option value="caballito">Caballito</option>
+            </select>
+        </div>
+        
+        <!-- metodso de pago -->
+
+    <div class="form-grupo">
+        <label>Metodo de pago</label>
+        <div class="radio-grupo">  
+            <label>
+                <input type="radio" name="pago" value="efectivo" required/>
+                Efectivo
+            </label>
+            <label>
+                <input type="radio" name="pago" value="debbito" />
+                Tarjeta de debito
+            </label>
+            <label>
+                <input type="radio" name="pago" value="credito" />
+                Tarjeta de credito
+            </label>
+            <label>
+                <input type="radio" name="pago" value="transferencia" />
+                Transferencia bancaria
+            </label>
+        </div>
+    </div>
+
+        </fieldset>
+
+        
+        <!-- Opciones adiconales -->
+         <fieldset>
+            <legend>Opciones Adicionales</legend>
+
+            <div class="form-grupo">
+                <label>Extras:</label>
+                <div class="checkbox-grupo">
+                    <label>
+                        <input type="checkbox" name="gps" value="si"/>
+                        GPS incluido
+                    </label>
+                    <label>
+                        <input type="checkbox" name="silla" value="si"/>
+                        Silla para bebes / niños
+                    </label>
+                    <label>
+                        <input type="checkbox" name="seguro" value="si"/>
+                        Seguro adicional
+                    </label>
+                    <label>
+                        <input type="checkbox" name="chofer" value="si"/>
+                        Chofer incluido
+                    </label>
+                </div>
+            </div>
+         </fieldset>
+
+         
+        <!-- Comentarios -->
+    
+        <fieldset>
+            <legend>Comentarios</legend>
+
+            <div class="form-grupo">
+                <label for="observaciones">Observaciones adicionales:</label>
+                <textarea
+                id="observaciones"
+                name="observaciones"
+                placeholder="Lugar para escribir consultas/ pedidos especiales"
+                rows="5"
+                ></textarea>
+            </div>
+        </fieldset>
+
+        
+        <!-- Botones-->
+         <div class="form-botones">
+            <button type="submit" class="btn-enviar">Enviar reserva</button>
+            <button type="reset" class="btn-limpiar">Limpiar formulario</button>
+        </div>
+
+    </form>
+</div>
+
+</main>
+</body>
+</html>
