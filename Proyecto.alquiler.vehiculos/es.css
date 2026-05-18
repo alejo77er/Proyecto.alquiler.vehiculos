@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -143,7 +148,9 @@ nav a:hover{
     line-height: 1.7;
 }
 
-#hero button {
+#hero boton-explorar {
+    display: inline-block;
+    text-decoration: none;
     margin-top:20px;
     background-color: #1a73e8;
     color: white;
@@ -156,7 +163,7 @@ nav a:hover{
     box-shadow: 0 4px 16px rgba(26, 115, 232, 0.4);
 }
 
-#hero button:hover {
+#hero button-explorar:hover {
     background-color: #1558b0;
 }
 
@@ -220,7 +227,6 @@ nav a:hover{
 }
 
 .servicio-icono{
-    /* Iconos de servicio agrandados para mejor visibilidad */
     width:64px;
     height:64px;
     padding: 10px;
@@ -320,8 +326,9 @@ nav a:hover{
     margin-bottom: 20px;
 }
 
-/* Botón dentro de la tarjeta de vehículo */
-.vehiculo button{
+.vehiculo .boton-reserva{
+    display: inline-block;
+    text-decoration: none;
     margin-top: 20px;
     background-color: #1a73e8;
     color: white;
@@ -330,20 +337,18 @@ nav a:hover{
     font-size: 1rem;
     font-weight: 600;
     border-radius: 600px;
+    transition: all 0.8s ease;
     cursor: pointer;
     width: 100%;
+    text-align: center;
+    box-sizing: border-box;
     box-shadow: 0 4px 16px rgba(5, 5, 5, 0.4);
 }
 
-.vehiculo button:hover{
+.vehiculo .boton-reserva:hover{
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
-
-
-
-
-
 
 #nosotros {
     padding: 60px 40px;
@@ -359,7 +364,7 @@ nav a:hover{
 .nosotros-container {
     display: flex;
     gap: 40px;
-    align-items: flex-start;
+    align-items: stretch;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -396,10 +401,11 @@ nav a:hover{
     margin-left: 20px;
 }
 
-.Nosotros-stats {
+.nosotros-stats {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-around;
+    gap:0;
     flex-shrink: 0;
     width: 200px;
     margin-top: 0;
@@ -554,7 +560,7 @@ footer{
 text-align: center;
 margin-top: 40px;
 padding-top: 20px;
-border-top: 1px solid black;
+border-top: 1px solid gray;
 }
 
 .footer-bottom p{
@@ -572,6 +578,7 @@ border-top: 1px solid black;
      }
     .nosotros-container {
         flex-direction: column;
+        align-items: stretch;
     }
     .nosotros-img { 
         width: 100%; height: 260px; 
@@ -582,6 +589,7 @@ border-top: 1px solid black;
         justify-content: center;
         width: 100%;
         padding-left: 0;
+        gap: 20px;
     }
     .stat {
         flex: 1 1 140px;
@@ -645,7 +653,7 @@ border-top: 1px solid black;
          font-size: 0.95rem;
          line-height: 1.2;
          }
-    .vehiculo button {
+    .vehiculo .boton.reserva{
         width: 100%;
         padding: 10px;
     }
@@ -653,6 +661,7 @@ border-top: 1px solid black;
 
     .nosotros-container {
          flex-direction: column;
+         align-items: stretch;
          }
     .nosotros-img {
          width: 100%;
